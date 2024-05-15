@@ -23,7 +23,7 @@ require("lazy").setup({
     {
         "nvim-treesitter/nvim-treesitter",
         config = function()
-            require("nvim-treesitter.configs").setup {
+            require("nvim-treesitter.configs").setup({
       -- A list of parser names, or "all" (parsers for c, lua, vim, vimdoc, and query should always be installed)
               ensure_installed = { 
                   "c", 
@@ -50,7 +50,18 @@ require("lazy").setup({
               highlight = {
                 enable = true,
               },
-        }
-    end,
+
+              incremental_selection = {
+                  enable = true,
+                  keymaps = {
+                      init_selection = "<Leader>ss", -- set to `false` to disable one of the mappings
+                      node_incremental = "<Leader>si",
+                      scope_incremental = "<Leader>sc",
+                      node_decremental = "<Leader>sd",
+                  },
+              },
+          })
+
+        end,
     },
 })  

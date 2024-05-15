@@ -21,3 +21,5 @@ vim.opt.ignorecase = true -- ignores case when searching
 
 vim.opt.termguicolors = true -- enables 256-bit colors
 
+vim.g.mapleader = " "
+
